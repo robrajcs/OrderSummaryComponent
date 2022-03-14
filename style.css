@@ -27,6 +27,7 @@ body {
     background-color: var(--clr-pale-blue);
     background-image: url("images/pattern-background-mobile.svg");
     background-repeat: no-repeat;
+    background-size: contain;
     font-size: 16px;
     font-family: "RedHatDisplay";
     color: var(--clr-desaturated-blue);
