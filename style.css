@@ -1,0 +1,137 @@
+@font-face {
+    font-family: "RedHatDisplay";
+    src: url("https://fonts.google.com/specimen/Red+Hat+Display");
+  }
+
+
+*,
+*::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --clr-pale-blue: hsl(225, 100%, 94%);
+    --clr-bright-blue: hsl(245, 75%, 52%);
+
+    --clr-very-pale-blue: hsl(225, 100%, 98%);
+    --clr-desaturated-blue: hsl(224, 23%, 55%);
+    --clr-dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+    display: grid;
+    height: 100vh;    
+    place-content: center;
+    background-color: var(--clr-pale-blue);
+    background-image: url("images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    font-size: 16px;
+    font-family: "RedHatDisplay";
+    color: var(--clr-desaturated-blue);
+}
+
+.card {
+    max-width: 350px;
+    overflow: hidden;
+    border-radius: 1rem;
+    text-align: center;    
+    background-color: white;
+}
+
+.card_image {
+    width: 100%;
+    object-fit: contain;
+    display: block;
+}
+.card_header {
+    margin-top: 2rem;
+    font-weight: 900;
+    color: var(--clr-dark-blue);
+}
+.card_text {
+    margin: 1rem auto 0 auto;    
+    width: 70%;
+    font-weight: 500;
+    }
+
+.price_container {
+    display: flex;
+    justify-content: space-around;
+    align-content:center;
+    background-color: var(--clr-very-pale-blue);
+    margin: 1rem auto;
+    padding: 1rem 0;
+    width: 80%;
+    border-radius: 8px;
+}
+.price_icon {
+    width: 15%;
+}
+.price_innertext {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: -1.5rem;
+}
+.price_text {
+    color: var(--clr-dark-blue);
+    font-weight: 900;
+}
+.price_price {
+
+}
+.button_change {
+    color: var(--clr-bright-blue);
+    text-decoration:underline;
+    background-color: var(--clr-very-pale-blue);
+    border-style: none;
+    font-weight: 700;
+}
+
+.button_proceed
+,.button_cancel {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.8em;    
+    font-weight: 700;    
+}
+
+.button_proceed {
+    background-color: var(--clr-bright-blue);
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 8px 8px 0 hsl(225, 100%, 94%);
+}
+
+.button_cancel {
+    background-color: white;
+    color:dimgray;
+    margin-bottom: 1.5rem;
+    border-style: none;
+}
+
+.button_proceed:hover
+,.button_cancel:hover
+,.button_change:hover {
+    cursor: pointer;
+}
+.button_proceed:hover {
+    background-color: var(--clr-desaturated-blue);
+}
+.button_cancel:hover {
+    color: var(--clr-dark-blue);
+}
+.button_change:hover {
+    color: var(--clr-desaturated-blue);
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        background-image: url("images/pattern-background-desktop.svg");
+    }
+    
+}
